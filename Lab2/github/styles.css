@@ -5,9 +5,13 @@
     align-items: center;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1250px) {
     #hero-title {
         font-size: 48px !important;
+    }
+
+    .add-on-single-card {
+        height: 170px !important;
     }
 }
 
@@ -19,6 +23,10 @@
     .plans {
         grid-template-columns: 1fr !important;
         max-width: 400px !important;
+    }
+
+    .add-on-single-card {
+        height: 190px !important;
     }
 
 }
@@ -88,8 +96,7 @@
     height: 900px;
     border-radius: 10px;
     border: 1px solid rgb(159, 159, 159);
-    box-shadow: 13px 8px 20px rgba(0, 0, 0, 0.4);
-
+    box-shadow: 13px 8px 40px rgba(0, 0, 0, 0.4);
     justify-self: center;
 
 
@@ -263,7 +270,91 @@ details p {
     margin-left: 13px;
 }
 
-#add-ons {
+.add-ons {
     color: rgb(0, 100, 207);
     font-weight: 400;
+}
+
+#enterprise-plan {
+    border: 7px solid transparent;
+}
+
+#enterprise-outer {
+    border: 7px solid rgb(0, 100, 207);
+    border-top-width: 25px;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    padding: 1px;
+}
+
+#recommended {
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    transform: translateX(-50%);
+    position: absolute;
+    top: -34px;
+    left: 25%;
+    margin-left: 27%;
+}
+
+.add-add-ons {
+    font-family: 'Mona Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-ons-text {
+    text-align: center;
+    font-size: 64px;
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(43, 43, 43);
+}
+
+.add-ons-cards {
+    flex: 1;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.add-on-logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: -6%;
+}
+
+.add-on-single-card {
+    padding: 24px;
+    border: 1px solid rgb(159, 159, 159, 0.4);
+    border-radius: 10px;
+    box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.15);
+
+    height: 150px;
+
+}
+
+.add-on-title {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.add-on-desc {
+    color: rgb(152, 152, 152);
+    font-size: 14px;
+}
+
+.add-on-CTA {
+    font-weight: 400;
+    font-size: 14px;
 }
