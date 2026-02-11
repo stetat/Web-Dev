@@ -1,0 +1,61 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.todo-container {
+    background: white;;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #dde;
+    border-radius: 6px;
+}
+
+.todo-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eed;
+    gap: 10px;
+}
+
+.todo-text {
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    word-break: break-word;
+    overflow: auto;
+    max-height: 70px;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #889;
+}
+
+.delete-btn {
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
