@@ -14,5 +14,5 @@ import {ProductService} from '../services/product.service';
 
 export class AppComponent {
   title='online-store';
-  productService = 
+  productServic
 }
