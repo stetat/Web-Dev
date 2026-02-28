@@ -1,19 +1,19 @@
 import {Product}  from '../models/product.model';
-import {Injectable} from '@angular/core';
+import {Injectable, signal} from '@angular/core';
 import {Category} from '../models/category.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  categories: Category[] = [
+  categories = signal<Category[]>([
     { id: 1, name: 'Smartphones' },
     { id: 2, name: 'Laptops' },
     { id: 3, name: 'Headphones' },
     { id: 4, name: 'Tablets' }
-  ];
+  ]);
 
-  products: Product[] = [
+  products = signal<Product[]>([
     {
       id: 1,
       name: `Смартфон Apple iPhone 13 128Gb черный`,
@@ -142,6 +142,10 @@ export class ProductService {
       images: ['https://resources.cdn-kaspi.kz/img/m/p/p0f/p24/97813280.png?format=gallery-medium', 'https://resources.cdn-kaspi.kz/img/m/p/pcb/pe8/60066834.jpg?format=gallery-medium', 'https://resources.cdn-kaspi.kz/img/m/p/p58/pe9/60066839.jpg?format=gallery-medium'],
       link: 'https://kaspi.kz/shop/p/naushniki-zhang-kai-s27-chernyi-137396098/?c=750000000',
     }
-  ];
+  ]);
+
+  deleteProduct(productId: number) {
+    this.products.update(cur => cur.filter((product) => product.id !== productId));
+  }
 }
 

@@ -97,5 +97,11 @@ h3 {
   font-weight: bold;
 }
 
+.likes-count {
+  background-color: transparent;
+  border: none;
+  font-size: 1.15em;
+}
+
 .wa { background-color: #25D366; }
 .tg { background-color: #0088cc; }
