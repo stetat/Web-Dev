@@ -54,7 +54,7 @@ def products_by_category(request, id):
     try:
         category = Category.objects.get(id=id)
         products = category.products.all()
-
+        
         return JsonResponse({
             "products": list(products.values())
         })
@@ -70,7 +70,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['get'])
     def products(self, request, pk=None):
-        category = self.get_objcet()
+        category = self.get_object()
         products = category.products.all()
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
